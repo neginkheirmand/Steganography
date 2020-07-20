@@ -12,10 +12,19 @@ def changePhoto(stringFileName, stringCode):
     # reverse 
     for i in range(heigh):
         for j in range(width):
-            c= 2
+            c = 2
             while(c>=0):
-                binaryColor = binLibrary.letterCounter(image[i,j,c])
-                if(binaryColor[7]==codeList)
+                binaryColor = binLibrary.numtoBin(image[i,j,c])
+                if(binaryColor[7]!=codeList[index]):
+                    binaryColor[7]=codeList[index]
+                    image[i,j,c]= binLibrary.binToNum(binaryColor)
+
+                index+=1
+                c-=1
+                if(index==len(codeList)):
+                    cv2.imwrite(image, "codedImage.bmp")
+                    return
+
 
                 
 

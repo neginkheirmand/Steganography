@@ -2,7 +2,7 @@
 '''
 this scrypt should take in a number and give a list of that number in binary mode
 '''
-def letterCounter ( number ):
+def numtoBin ( number ):
     list = []
     i=0
     while(number!=0):
@@ -23,7 +23,18 @@ def letterCounter ( number ):
     return newList
 
 # print(ord('h'))
-# print(letterCounter(104))
+# print(numtoBin(104))
+
+def binToNum(binList):
+    number =0
+    i = 0
+    while(i<len(binList)):
+        number+=binList[i]*(pow(2, len(binList)-1-i))
+        i+=1
+    return number
+
+# print(binToNum([0, 1, 1, 0, 1, 0, 0, 0]))
+
 
 def stringToBin(string):
     textList=[]
@@ -34,7 +45,7 @@ def stringToBin(string):
             textList.append("*")
         else:
             textNum=ord(string[i])
-            textList+=letterCounter(textNum)
+            textList+=numtoBin(textNum)
         i+=1
     
     strin=""
