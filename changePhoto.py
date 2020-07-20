@@ -22,10 +22,10 @@ def changePhoto(stringFileName, stringCode):
                 index+=1
                 c-=1
                 if(index==len(codeList)):
-                    cv2.imwrite( "codedImage.bmp", image)
+                    cv2.imwrite( "codedImage1.bmp", image)
                     return
 
-changePhoto("AUT_HotChocolate(1).bmp", "U_R0CK")
+changePhoto("AUT_HotChocolate.bmp", "U_R0CK")
 
                 
 
