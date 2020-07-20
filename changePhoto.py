@@ -7,9 +7,15 @@ def changePhoto(stringFileName, stringCode):
     heigh, width, color = image.shape
     codeList = binLibrary.stringToBin(stringCode)
     index = 0 
+    # in this type of iterating the index 0 is blue 
+    # 1 is green and 2 is red thats why the last for is 
+    # reverse 
     for i in range(heigh):
         for j in range(width):
-            for c in range(color):
-                
+            c= 2
+            while(c>=0):
+                binaryColor = binLibrary.letterCounter(image[i,j,c])
+                if(binaryColor[7]==codeList)
+
                 
 
