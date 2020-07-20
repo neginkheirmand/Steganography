@@ -41,11 +41,8 @@ def stringToBin(string):
     i=0
     # for char in string:
     while(i<len(string)):
-        if(string[i] == ' '):
-            textList.append("*")
-        else:
-            textNum=ord(string[i])
-            textList+=numtoBin(textNum)
+        textNum=ord(string[i])
+        textList+=numtoBin(textNum)
         i+=1
     
     strin=""
@@ -61,6 +58,15 @@ def stringToBin(string):
     # print(strin)
     return textList
 
+def binToStr(binList):
+    i = 8
+    string = ""
+    while(i<=len(binList)):
+        string+=chr(binToNum(binList[i-8:i]))
+        i+=8
+    return string
+
+print("*",binToStr([0,1,1,0,1,0,0,0]), "*")
 
 # stringToBin("U_R0CK")
-stringToBin("_B3_zuD_3HS4S_behtarE_KH4hEd_kard")
+# stringToBin("_B3_zuD_3HS4S_behtarE_KH4hEd_kard")
