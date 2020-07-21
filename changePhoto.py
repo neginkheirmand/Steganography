@@ -10,6 +10,9 @@ def changePhoto(stringFileName, stringCode, nameCodedFile):
     #     print("the file does not exist")
     #     sys.exit(0)
     heigh, width, color = image.shape
+    if(heigh*width*3<len(stringCode)*8):
+        print("the image is too small")
+        return
     codeList = binLibrary.stringToBin(stringCode)
     index = 0 
     # in this type of iterating the index 0 is blue 
