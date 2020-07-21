@@ -66,7 +66,7 @@ def binToStr(binList):
         i+=8
     return string
 
-print("*",binToStr([0,1,1,0,1,0,0,0]), "*")
+# print("*",binToStr([0,1,1,0,1,0,0,0]), "*")
 
 # stringToBin("U_R0CK")
 # stringToBin("_B3_zuD_3HS4S_behtarE_KH4hEd_kard")

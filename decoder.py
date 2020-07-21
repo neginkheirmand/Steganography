@@ -35,4 +35,3 @@ def decoder(nameSecundary, namePrimmary):
     
 
 print(decoder("codedImage1.bmp", "AUT_HotChocolate.bmp"))
-    
