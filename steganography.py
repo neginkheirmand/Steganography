@@ -21,10 +21,6 @@ def steg():
         print("enter the message")
         code = input()
         changePhoto.changePhoto(fileToEncrypt, code, codeFile)
-        
-
-
-
 
 
 steg()

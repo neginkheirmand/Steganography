@@ -21,7 +21,7 @@ def decoder(nameSecundary, namePrimmary):
             while(c>=0):
                 # print(binLibrary.numtoBin( image2[h,w,c]) ,binLibrary.numtoBin( image1[h,w,c]))
                 diff = image2[h, w, c] - image1[h, w, c]
-                print("the first image ", image1[h,w,c], "   the second image ", image2[h,w,c], "  the difference= " ,diff)
+                # print("the first image ", image1[h,w,c], "   the second image ", image2[h,w,c], "  the difference= " ,diff)
                 if(diff == 0):
                     codedList.append((binLibrary.numtoBin(image2[h,w,c]))[7])                    
                 elif(diff==-1 or diff==255):
@@ -30,7 +30,7 @@ def decoder(nameSecundary, namePrimmary):
                     codedList.append(1)
 
                 if((h+1)*(w+1)*(3-c)>maxNumber):
-                    print(codedList)
+                    # print(codedList)
                     return binLibrary.binToStr(codedList)
                 c-=1
     
