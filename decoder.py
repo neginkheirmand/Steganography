@@ -13,8 +13,8 @@ def decoder(nameSecundary, namePrimmary):
         print("the images are not equal")
         return
 
-    maxNumber = 1000
     codedList = []
+    zeroRepeted=0
     for h in range(heigh1):
         for w in range(width1):
             c=2
@@ -23,15 +23,17 @@ def decoder(nameSecundary, namePrimmary):
                 diff = image2[h, w, c] - image1[h, w, c]
                 # print("the first image ", image1[h,w,c], "   the second image ", image2[h,w,c], "  the difference= " ,diff)
                 if(diff == 0):
-                    codedList.append((binLibrary.numtoBin(image2[h,w,c]))[7])                    
+                    zeroRepeted+=1
+                    codedList.append((binLibrary.numtoBin(image2[h,w,c]))[7])  
+                    if(zeroRepeted==14):
+                        codedList[len(codedList)-8:len(codedList)] = []
+                        return binLibrary.binToStr(codedList)                  
                 elif(diff==-1 or diff==255):
                     codedList.append(0)
+                    zeroRepeted=0
                 elif(diff==1):
                     codedList.append(1)
-
-                if((h+1)*(w+1)*(3-c)>maxNumber):
-                    # print(codedList)
-                    return binLibrary.binToStr(codedList)
+                    zeroRepeted=0
                 c-=1
     
 

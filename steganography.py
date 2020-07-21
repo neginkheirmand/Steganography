@@ -10,9 +10,10 @@ def steg():
         encodedFile = input()
         print("enter the name of the primmary file")
         primmaryFile = input()
-        print("how much of the image you want to search in?")
-        amount=input("1)all 2)1/2 3)1/3 4)1/4")
-        print(decoder.decoder(encodedFile, primmaryFile))
+        fo = open("encryptedMessage.txt", "w")
+        fo.write(decoder.decoder(encodedFile, primmaryFile) )
+        fo.flush()
+        fo.close()
     elif(string == "2" or string == "2)" or string == "encrypt" or string == "2)encrypt"):
         print("enter the name of the file you want to encrypt")
         fileToEncrypt = input()

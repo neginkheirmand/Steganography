@@ -6,9 +6,9 @@ import binLibrary
 
 def changePhoto(stringFileName, stringCode, nameCodedFile):
     image = cv2.imread(stringFileName)
-    if(image==None):
-        print("the file does not exist")
-        sys.exit(0)
+    # if(image==None):
+    #     print("the file does not exist")
+    #     sys.exit(0)
     heigh, width, color = image.shape
     codeList = binLibrary.stringToBin(stringCode)
     index = 0 
@@ -26,7 +26,6 @@ def changePhoto(stringFileName, stringCode, nameCodedFile):
                     # print(i,j,c,"  ", binaryColor[7],"!=" , codeList[index])
                     binaryColor[7]=codeList[index]
                     image[i,j,c]= binLibrary.binToNum(binaryColor)
-
                 index+=1
                 c-=1
                 if(index==len(codeList)):
