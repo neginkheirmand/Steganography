@@ -10,20 +10,21 @@ def decoder(nameSecundary, namePrimmary):
 
 
     if(width1 != width2 or heigh1 != heigh2 or color1!=color2 ):
-        print("the photoes are not equal")
+        print("the images are not equal")
         return
 
-    maxNumber = 100
+    maxNumber = 1000
     codedList = []
     for h in range(heigh1):
         for w in range(width1):
             c=2
             while(c>=0):
+                # print(binLibrary.numtoBin( image2[h,w,c]) ,binLibrary.numtoBin( image1[h,w,c]))
                 diff = image2[h, w, c] - image1[h, w, c]
+                print("the first image ", image1[h,w,c], "   the second image ", image2[h,w,c], "  the difference= " ,diff)
                 if(diff == 0):
-                    codedList.append(binLibrary.numtoBin(image2[h,w,c])[7])                    
-                # print("the first image ", image1[h,w,c], "   the second image ", image2[h,w,c], "  the difference= " ,diff)
-                elif(diff==-1):
+                    codedList.append((binLibrary.numtoBin(image2[h,w,c]))[7])                    
+                elif(diff==-1 or diff==255):
                     codedList.append(0)
                 elif(diff==1):
                     codedList.append(1)

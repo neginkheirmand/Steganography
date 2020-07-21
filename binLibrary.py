@@ -23,7 +23,8 @@ def numtoBin ( number ):
     return newList
 
 # print(ord('h'))
-# print(numtoBin(104))
+# print(numtoBin(1))
+# print(numtoBin(250))
 
 def binToNum(binList):
     number =0
@@ -45,18 +46,15 @@ def stringToBin(string):
         textList+=numtoBin(textNum)
         i+=1
     
-    strin=""
+    # strin=""
 
-    for j in range(len(textList)):
-        # print("---", textList[j])
-        if(textList[j]=="*"):
-            # print(strin)
-            strin= ""
-        else:
-            strin+=str(textList[j])
-
+    # for j in range(len(textList)):
+    #     strin+=str(textList[j])
     # print(strin)
+
     return textList
+
+# stringToBin("hello")
 
 def binToStr(binList):
     i = 8
@@ -67,6 +65,9 @@ def binToStr(binList):
     return string
 
 # print("*",binToStr([0,1,1,0,1,0,0,0]), "*")
+# print("*",binToStr([0,1,1,0,1,0,0,0, 0,1,1,0,1,0,0,0, 0,1,1,0,0,1,0,1, 1, 0,0,1,2,]), "*")
 
-# stringToBin("U_R0CK")
+
+
+# print(stringToBin("U_R0CK"))
 # stringToBin("_B3_zuD_3HS4S_behtarE_KH4hEd_kard")

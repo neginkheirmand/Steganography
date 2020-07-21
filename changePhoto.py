@@ -14,8 +14,11 @@ def changePhoto(stringFileName, stringCode):
         for j in range(width):
             c = 2
             while(c>=0):
+                print(image[i,j,c])
                 binaryColor = binLibrary.numtoBin(image[i,j,c])
+                # binaryColor is a list with 8 elements(the color in binary mode)
                 if(binaryColor[7]!=codeList[index]):
+                    # print(i,j,c,"  ", binaryColor[7],"!=" , codeList[index])
                     binaryColor[7]=codeList[index]
                     image[i,j,c]= binLibrary.binToNum(binaryColor)
 
@@ -25,7 +28,7 @@ def changePhoto(stringFileName, stringCode):
                     cv2.imwrite( "codedImage1.bmp", image)
                     return
 
-changePhoto("AUT_HotChocolate.bmp", "U_R0CK")
+changePhoto("AUT_HotChocolate.bmp", "helloThereBaby")
 
                 
 
