@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import binLibrary
 
-def changePhoto(stringFileName, stringCode):
+def changePhoto(stringFileName, stringCode, nameCodedFile):
     image = cv2.imread(stringFileName)
     heigh, width, color = image.shape
     codeList = binLibrary.stringToBin(stringCode)
@@ -25,10 +25,9 @@ def changePhoto(stringFileName, stringCode):
                 index+=1
                 c-=1
                 if(index==len(codeList)):
-                    cv2.imwrite( "codedImage1.bmp", image)
+                    cv2.imwrite(nameCodedFile, image)
                     return
-
-changePhoto("AUT_HotChocolate.bmp", "helloThereBaby")
+# changePhoto("AUT_HotChocolate.bmp", "helloThereBaby", "codedFile.jpg")
 
                 
 

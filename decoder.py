@@ -35,4 +35,4 @@ def decoder(nameSecundary, namePrimmary):
                 c-=1
     
 
-print(decoder("codedImage1.bmp", "AUT_HotChocolate.bmp"))
+# print(decoder("codedImage1.bmp", "AUT_HotChocolate.bmp"))
