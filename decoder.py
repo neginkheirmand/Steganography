@@ -13,6 +13,7 @@ def decoder(nameSecundary, namePrimmary):
         print("the images are not equal")
         return
 
+    fo = open("encryptedMessage.txt", "w")
     codedList = []
     zeroRepeted=0
     for h in range(heigh1):
@@ -27,6 +28,7 @@ def decoder(nameSecundary, namePrimmary):
                     codedList.append((binLibrary.numtoBin(image2[h,w,c]))[7])  
                     if(zeroRepeted==14):
                         codedList[len(codedList)-8:len(codedList)] = []
+                        fo.close()
                         return binLibrary.binToStr(codedList)                  
                 elif(diff==-1 or diff==255):
                     codedList.append(0)
@@ -37,4 +39,4 @@ def decoder(nameSecundary, namePrimmary):
                 c-=1
     
 
-# print(decoder("codedImage1.bmp", "AUT_HotChocolate.bmp"))
+print(decoder("codedFile.jpg", "spring.jpg"))

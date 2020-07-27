@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 import binLibrary
-
+import re
 
 
 def changePhoto(stringFileName, stringCode, nameCodedFile):
@@ -35,6 +35,16 @@ def changePhoto(stringFileName, stringCode, nameCodedFile):
                     cv2.imwrite(nameCodedFile, image)
                     return
 # changePhoto("AUT_HotChocolate.bmp", "helloThereBaby", "codedFile.jpg")
-
+changePhoto("spring.jpg", "helloThereBaby im hereeee but you cant see me", "codedFile.jpg")
                 
+def changePhotoFile(stringFileName, fileCodeHolder, nameCodedFile):
+    fileCode = open(fileCodeHolder, "rb")
+    stringCode = str(fileCode.read(), 'utf-8')
+    changePhoto(stringFileName, stringCode, nameCodedFile)
+    
+# changePhotoFile("spring.jpg", "C:\\Users\\venus\\Desktop\\aut_hotcholocate\\New folder\\allin1.txt", "springCoded.jpg")
 
+def get_char_count(s):
+    return len(re.findall(r'\S', s))
+
+# print(get_char_count(""))

@@ -10,10 +10,7 @@ def steg():
         encodedFile = input()
         print("enter the name of the primmary file")
         primmaryFile = input()
-        fo = open("encryptedMessage.txt", "w")
-        fo.write(decoder.decoder(encodedFile, primmaryFile) )
-        fo.flush()
-        fo.close()
+        decoder.decoder(encodedFile, primmaryFile)
     elif(string == "2" or string == "2)" or string == "encrypt" or string == "2)encrypt"):
         print("enter the name of the file you want to encrypt")
         fileToEncrypt = input()
