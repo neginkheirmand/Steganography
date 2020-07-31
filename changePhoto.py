@@ -91,4 +91,6 @@ def changePhotoFile(stringFileName, fileCodeHolder, nameCodedFile):
         print('\033[91m',"the files selected are either not images or do not exist", '\033[0m')  
         return 
     
-changePhotoFile("spring.bmp", "C:\\Users\\venus\\Desktop\\aut_hotcholocate\\New folder\\allin1.txt", "springCoded.bmp")
+# changePhotoFile("spring.bmp", "C:\\Users\\venus\\Desktop\\aut_hotcholocate\\New folder\\1.txt", "springCoded.bmp")
+# print(binLibrary.stringToBin("0\n"))
+# print(binLibrary.stringToBin("*\n"))

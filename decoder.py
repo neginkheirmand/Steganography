@@ -20,29 +20,39 @@ def decoder(nameSecundary, namePrimmary):
             for w in range(width1):
                 c=2
                 while(c>=0):
-                    # print(binLibrary.numtoBin( image2[h,w,c]) ,binLibrary.numtoBin( image1[h,w,c]))
                     diff = image2[h, w, c] - image1[h, w, c]
-                    # print(diff)
-                    # print("the first image ", image1[h,w,c], "   the second image ", image2[h,w,c], "  the difference= " ,diff)
+                    print(zeroRepeted)
                     if(diff == 0):
                         zeroRepeted+=1
-                        codedList.append((binLibrary.numtoBin(image2[h,w,c]))[7])  
-                        if(zeroRepeted==14):
-                            codedList[len(codedList)-8:len(codedList)] = []
-                            fo.write(binLibrary.binToStr(codedList))
-                            fo.close()
-                            return binLibrary.binToStr(codedList)                  
+                        # print(0)
+                        # if(zeroRepeted==8):
+                        #     print("should end?")
+                        codedList.append((binLibrary.numtoBin(image2[h,w,c]))[7])                  
                     elif(diff==-1 or diff==255):
                         codedList.append(0)
                         zeroRepeted=0
+                        # print(1)
                     elif(diff==1):
                         codedList.append(1)
+                        zeroRepeted=0
+                        # print(1)
+                    if(len(codedList) == 8):
+                        fo.flush()
+                        if( zeroRepeted == 8):
+                            print('\033[91m', zeroRepeted)
+                            print("here")
+                            fo.close()
+                            return
+                        fo.write(binLibrary.binToStr(codedList))
+                        codedList=[]
+                        # print(1)
                         zeroRepeted=0
                     c-=1
     except:
         print('\033[91m',"the files selected are either not images or do not exist", '\033[0m')  
-        return ""  
+        return   
 
 # print(decoder("codedFile.jpg", "spring.jpg"))
 # print(decoder("codedFile.bmp", "AUT_HotChocolate.bmp"))
 # print(decoder("springCoded.bmp", "spring.bmp"))
+decoder("springCoded.bmp", "spring.bmp")
