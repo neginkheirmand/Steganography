@@ -22,10 +22,6 @@ def numtoBin ( number ):
         j-=1
     return newList
 
-# print(ord('h'))
-# print(numtoBin(1))
-# print(numtoBin(250))
-
 def binToNum(binList):
     number =0
     i = 0
@@ -34,7 +30,6 @@ def binToNum(binList):
         i+=1
     return number
 
-# print(binToNum([0, 1, 1, 0, 1, 0, 0, 0]))
 
 
 def stringToBin(string):
@@ -45,16 +40,8 @@ def stringToBin(string):
         textNum=ord(string[i])
         textList+=numtoBin(textNum)
         i+=1
-    
-    # strin=""
-
-    # for j in range(len(textList)):
-    #     strin+=str(textList[j])
-    # print(strin)
-
     return textList
 
-# stringToBin("hello")
 
 def binToStr(binList):
     i = 8
@@ -63,11 +50,3 @@ def binToStr(binList):
         string+=chr(binToNum(binList[i-8:i]))
         i+=8
     return string
-
-# print("*",binToStr([0,1,1,0,1,0,0,0]), "*")
-# print("*",binToStr([0,1,1,0,1,0,0,0, 0,1,1,0,1,0,0,0, 0,1,1,0,0,1,0,1, 1, 0,0,1,2,]), "*")
-
-
-
-# print(stringToBin("U_R0CK"))
-# stringToBin("_B3_zuD_3HS4S_behtarE_KH4hEd_kard")

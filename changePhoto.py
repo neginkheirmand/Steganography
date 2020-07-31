@@ -6,9 +6,7 @@ import re
 
 def changePhoto(stringFileName, stringCode, nameCodedFile):
     image = cv2.imread(stringFileName)
-    # if(image==None): 
-    #     print("the file does not exist")
-    #     sys.exit(0)
+
     try:
         heigh, width, color = image.shape
         if(heigh*width*3<len(stringCode)*8):
@@ -51,9 +49,6 @@ def changePhotoFile(stringFileName, fileCodeHolder, nameCodedFile):
     fileCode.close()
     fileCode = open(fileCodeHolder, encoding="utf8")
     image = cv2.imread(stringFileName)
-    # if(image==None): 
-    #     print("the file does not exist")
-    #     sys.exit(0)
     try:
         heigh, width, color = image.shape
         if(heigh*width*3<numChars*8):
@@ -91,6 +86,3 @@ def changePhotoFile(stringFileName, fileCodeHolder, nameCodedFile):
         print('\033[91m',"the files selected are either not images or do not exist", '\033[0m')  
         return 
     
-# changePhotoFile("spring.bmp", "C:\\Users\\venus\\Desktop\\aut_hotcholocate\\New folder\\1.txt", "springCoded.bmp")
-# print(binLibrary.stringToBin("0\n"))
-# print(binLibrary.stringToBin("*\n"))
