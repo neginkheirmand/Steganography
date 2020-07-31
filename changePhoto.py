@@ -46,13 +46,49 @@ def changePhoto(stringFileName, stringCode, nameCodedFile):
 
                 
 def changePhotoFile(stringFileName, fileCodeHolder, nameCodedFile):
-    fileCode = open(fileCodeHolder, "rb")
-    stringCode = str(fileCode.read(), 'utf-8')
-    changePhoto(stringFileName, stringCode, nameCodedFile)
+    fileCode = open(fileCodeHolder, encoding="utf8")
+    numChars = len(fileCode.read())
+    fileCode.close()
+    fileCode = open(fileCodeHolder, encoding="utf8")
+    image = cv2.imread(stringFileName)
+    # if(image==None): 
+    #     print("the file does not exist")
+    #     sys.exit(0)
+    try:
+        heigh, width, color = image.shape
+        if(heigh*width*3<numChars*8):
+            print("the image is too small")
+            return
+        # codeList will be an array of 8 components representing characters in the text 
+        index = 0
+        char = fileCode.read(1)
+        if not char:
+            print("End of file")
+            return
+        codeList = binLibrary.stringToBin(char)
+        for i in range(heigh):
+            for j in range(width):
+                c = 2
+                while(c>=0):
+                    binaryColor = binLibrary.numtoBin(image[i,j,c])
+                    # binaryColor is a list with 8 elements(the color in binary mode)
+                    if(binaryColor[7]!=codeList[index]):
+                        binaryColor[7]=codeList[index]
+                        image[i,j,c]= binLibrary.binToNum(binaryColor)
+                    index+=1
+                    c-=1
+                    if(index==8):
+                        char = fileCode.read(1)
+                        index=0
+                        if not char:
+                            print("End of file")
+                            cv2.imwrite(nameCodedFile, image)
+                            return
+                        codeList = binLibrary.stringToBin(char)
+        cv2.imwrite(nameCodedFile, image)
+        return
+    except:
+        print('\033[91m',"the files selected are either not images or do not exist", '\033[0m')  
+        return 
     
-# changePhotoFile("spring.jpg", "C:\\Users\\venus\\Desktop\\aut_hotcholocate\\New folder\\allin1.txt", "springCoded.jpg")
-
-def get_char_count(s):
-    return len(re.findall(r'\S', s))
-
-# print(get_char_count(""))
+changePhotoFile("spring.bmp", "C:\\Users\\venus\\Desktop\\aut_hotcholocate\\New folder\\allin1.txt", "springCoded.bmp")

@@ -29,6 +29,7 @@ def decoder(nameSecundary, namePrimmary):
                         codedList.append((binLibrary.numtoBin(image2[h,w,c]))[7])  
                         if(zeroRepeted==14):
                             codedList[len(codedList)-8:len(codedList)] = []
+                            fo.write(binLibrary.binToStr(codedList))
                             fo.close()
                             return binLibrary.binToStr(codedList)                  
                     elif(diff==-1 or diff==255):
@@ -38,11 +39,10 @@ def decoder(nameSecundary, namePrimmary):
                         codedList.append(1)
                         zeroRepeted=0
                     c-=1
-
     except:
         print('\033[91m',"the files selected are either not images or do not exist", '\033[0m')  
         return ""  
 
 # print(decoder("codedFile.jpg", "spring.jpg"))
 # print(decoder("codedFile.bmp", "AUT_HotChocolate.bmp"))
-print(decoder("codedFile.png", "AUT_HotChocolate.png"))
+# print(decoder("springCoded.bmp", "spring.bmp"))
