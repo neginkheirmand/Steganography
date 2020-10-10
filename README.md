@@ -5,8 +5,13 @@ Hiding text inside images using steganography, without distorting the image too 
 
 
 ### Content:
+
 binLibrary.py -> text to binary array
+
 changePhoto.py-> hide text inside specified image
+
 decoder.py-> decoder
+
 steganography-> run to see the magic happen :)
+
 .\test\difference.py -> cant see any difference between the images? run this scrypt to mark the different pixels with red 
