@@ -1,3 +1,6 @@
+#this scrypt should see if there are is difference between the images "AUT_HotChocolate.bmp" and "HotChocolateWithTasteOfCode.bmp" 
+#and color them red in the output file, if there was no difference in a pixel should leave it as it is
+
 import cv2
 
 def difference(primmary, secundary):
@@ -19,3 +22,4 @@ def difference(primmary, secundary):
     return
 
 difference("AUT_HotChocolate.bmp", "HotChocolateWithTasteOfCode.bmp")
+
