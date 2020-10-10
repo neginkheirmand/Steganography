@@ -46,3 +46,4 @@ def decoder(nameSecundary, namePrimmary):
     except:
         print('\033[91m',"the files selected are either not images or do not exist", '\033[0m')  
         return
+decoder("Coded_John_Cena.png", "john_cena.png")

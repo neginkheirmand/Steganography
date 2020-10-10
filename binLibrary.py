@@ -1,7 +1,3 @@
-
-'''
-this scrypt should take in a number and give a list of that number in binary mode
-'''
 def numtoBin ( number ):
     list = []
     i=0

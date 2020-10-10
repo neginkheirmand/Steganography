@@ -85,4 +85,4 @@ def changePhotoFile(stringFileName, fileCodeHolder, nameCodedFile):
     except:
         print('\033[91m',"the files selected are either not images or do not exist", '\033[0m')  
         return 
-    
+# changePhoto("C:\\Users\\venus\\Desktop\\aut_hotcholocate\\New folder\\john_cena.png", "U Cant See Me", "Coded_John_Cena.png")
