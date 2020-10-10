@@ -13,7 +13,7 @@ def steg():
         primmaryFile = input()
         filename, file_extension = os.path.splitext(encodedFile)
         filename1, file_extension1 = os.path.splitext(primmaryFile)
-        if((file_extension1 != ".png " and file_extension1!=".bmp") or (file_extension!=file_extension1) ):
+        if((file_extension1 != ".png" and file_extension1!=".bmp") or (file_extension!=file_extension1) ):
             print("the extension of the files or either not equal or not supported")
             return
         print("encrypted message in encryptedMessage.txt")
@@ -22,7 +22,7 @@ def steg():
         print("enter the name of the file you want to encrypt or its absolute path")
         fileToEncrypt = input()
         filename, file_extension = os.path.splitext(fileToEncrypt)
-        if(file_extension != ".png " and file_extension!=".bmp"):
+        if(file_extension != ".png" and file_extension!=".bmp"):
             print("only .png and .bmp types are supported")
             return
         print("enter the name of the output file")
