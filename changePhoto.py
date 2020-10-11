@@ -85,4 +85,7 @@ def changePhotoFile(stringFileName, fileCodeHolder, nameCodedFile):
     except:
         print('\033[91m',"the files selected are either not images or do not exist", '\033[0m')  
         return 
-# changePhoto("C:\\Users\\venus\\Desktop\\aut_hotcholocate\\New folder\\john_cena.png", "U Cant See Me", "Coded_John_Cena.png")
+
+
+#if you want to hide a more than just a few lines in some image, use the  changePhotoFile function as shown bellow 
+# changePhotoFile(".\examples\spring.png", "allin1.txt", "springCoded.png")
