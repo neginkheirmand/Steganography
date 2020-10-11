@@ -14,12 +14,16 @@ def difference(primmary, secundary):
                 image2[h,w]=[0,0,255]
                 equal+=1
                 if(equal==14):
-                    cv2.imwrite("difference.bmp", image2)
+                    # cv2.imwrite("difference.bmp", image2)
+                    cv2.imwrite("difference.png", image2)
                     return
             else:
                 equal=0
-    cv2.imwrite( "difference.bmp",image2)
+    # cv2.imwrite( "difference.bmp",image2)
+    cv2.imwrite( "difference.png",image2)
+
     return
 
-difference("AUT_HotChocolate.bmp", "HotChocolateWithTasteOfCode.bmp")
+# difference(".\\examples\\spring.bmp", ".\\exmples\\springCoded.bmp")
+difference(".\\examples\\spring.png", ".\\exmples\\springCoded.png")
 
