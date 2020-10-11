@@ -33,4 +33,4 @@ look at the next photo in which the different pixels are marked as red:
 now you can clearly see the difference and exactly where the documentation ends in the image.
 ###supports:
 - .png and .bmp files
-- if the input text is too large, run the changePhoto.py after uncommenting the last line and writing the path of the photo as shown in the changePhoto.py scrypt.
+- if the input text is too large put it on .txt file and run the changePhoto.py after uncommenting the last line and writing the path of the photo and the .txt file as shown in the changePhoto.py scrypt.
