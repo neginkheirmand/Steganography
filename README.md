@@ -1,6 +1,6 @@
 # Steganography
 this project was inspired by this [video](https://www.youtube.com/watch?v=TWEXCYQKyDc&t=400s&ab_channel=Computerphile) 
-and implemented Using [OpenCV](https://opencv.org/)
+and implemented Using [OpenCV](https://opencv.org/) Library in python
 
 Hiding text inside images using steganography, without distorting the image too much.
 
