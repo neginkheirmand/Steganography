@@ -1,5 +1,5 @@
 # Steganography
-this project was inspired by this [video](https://www.youtube.com/watch?v=TWEXCYQKyDc&t=400s&ab_channel=Computerphile) 
+This project was inspired by this [video](https://www.youtube.com/watch?v=TWEXCYQKyDc&t=400s&ab_channel=Computerphile) 
 and implemented Using [OpenCV](https://opencv.org/) Library in python
 
 Hiding text inside images using steganography, without distorting the image too much.
@@ -22,8 +22,8 @@ steganography-> run to see the magic happen :)
 primary image:
 ![](https://github.com/neginkheirmand/Steganography/blob/main/examples/spring.png?raw=true)
 
-after hiding text:
-you are not only looking at a photo of my faculty camp, but also documentation of python. yes all the 113096 lines of it(4MB of documentation).
+After hiding text:
+you are not only looking at a photo of my faculty camp, but also python's documentation. Yes all the 113096 lines of it(4MB of documentation).
 
 ![](https://github.com/neginkheirmand/Steganography/blob/main/examples/springCoded.png?raw=true)
 
