@@ -7,29 +7,46 @@ Hiding text inside images using steganography, without distorting the image too 
 
 ### Content:
 
-binLibrary.py -> text to binary array
+    binLibrary.py -> text to binary array
 
-changePhoto.py-> hide text inside specified image
+    changePhoto.py-> hide text inside specified image
 
-decoder.py-> decoder
+    decoder.py-> decoder
 
-steganography-> run to see the magic happen :)
+    steganography-> run to see the magic happen :)
 
-.\test\difference.py -> cant see any difference between the images? run this scrypt to mark the different pixels with red 
+    .\test\difference.py -> cant see any difference between the images? run this scrypt to mark the different pixels with red 
 
 
 ### Examples:
+
+**All the images are compressed so if you want to see the original refer to the provided links.**
+
 primary image:
-![](https://github.com/neginkheirmand/Steganography/blob/main/examples/spring.png?raw=true)
+
+raw [here](https://github.com/neginkheirmand/Steganography/blob/main/examples/spring.png?raw=true)
+
+![](https://github.com/neginkheirmand/Steganography/blob/main/examples/spring_compressed.png?raw=true)
 
 After hiding text:
+
 you are not only looking at a photo of my faculty camp, but also python's documentation. Yes all the 113096 lines of it(4MB of documentation).
 
-![](https://github.com/neginkheirmand/Steganography/blob/main/examples/springCoded.png?raw=true)
+
+raw [here](https://github.com/neginkheirmand/Steganography/blob/main/examples/springCoded.png?raw=true)
+
+![](https://github.com/neginkheirmand/Steganography/blob/main/examples/springCoded_compressed.png?raw=true)
 
 you think they are the same picture?
 look at the next photo in which the different pixels are marked as red:
-![](https://github.com/neginkheirmand/Steganography/blob/main/examples/difference.png?raw=true)
+
+raw [here](https://github.com/neginkheirmand/Steganography/blob/main/examples/difference.png?raw=true)
+
+![](https://github.com/neginkheirmand/Steganography/blob/main/examples/difference_compressed.png?raw=true)
+
+With a little a zoom on [difference.png](https://github.com/neginkheirmand/Steganography/blob/main/examples/difference.png?raw=true):
+
+![](https://github.com/neginkheirmand/Steganography/blob/main/examples/Difference_zoom.png?raw=true)
 
 now you can clearly see the difference and exactly where the documentation ends in the image.
 ###supports:
