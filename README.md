@@ -49,6 +49,6 @@ With a little a zoom on [difference.png](https://github.com/neginkheirmand/Stega
 ![](https://github.com/neginkheirmand/Steganography/blob/main/examples/Difference_zoom.png?raw=true)
 
 now you can clearly see the difference and exactly where the documentation ends in the image.
-###supports:
+### supports:
 - .png and .bmp files
 - if the input text is too large put it on .txt file and run the changePhoto.py after uncommenting the last line and writing the path of the photo and the .txt file as shown in the changePhoto.py scrypt.
