@@ -1,5 +1,5 @@
 # Steganography
-This project was inspired by this [video](https://www.youtube.com/watch?v=TWEXCYQKyDc&t=400s&ab_channel=Computerphile) 
+This project of mine was inspired by [computerphile's video](https://www.youtube.com/watch?v=TWEXCYQKyDc&t=400s&ab_channel=Computerphile) 
 and implemented Using [OpenCV](https://opencv.org/) Library in python
 
 Hiding text inside images using steganography, without distorting the image too much.
@@ -20,7 +20,7 @@ Hiding text inside images using steganography, without distorting the image too 
 
 ### Examples:
 
-**All the images are compressed so if you want to see the original refer to the provided links.**
+**All the images are compressed so if you want to see the original, pleqase refer to the provided links.**
 
 primary image:
 
@@ -37,7 +37,7 @@ raw [here](https://github.com/neginkheirmand/Steganography/blob/main/examples/sp
 
 ![](https://github.com/neginkheirmand/Steganography/blob/main/examples/springCoded_compressed.png?raw=true)
 
-you think they are the same picture?
+You think they are the same picture?
 look at the next photo in which the different pixels are marked as red:
 
 raw [here](https://github.com/neginkheirmand/Steganography/blob/main/examples/difference.png?raw=true)
